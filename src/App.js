@@ -1,19 +1,21 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AdminLayout from "./components/Layout/AdminLayout";
-import DefaultLayout from "./components/Layout/DefaultLayout";
-import { GlobalStyle } from "./styles";
-
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import AppProvider from './AppProvider';
+import AppRoutes from './containers/AppRoutes';
+import store from './redux/store';
+import { GlobalStyle } from './styles';
 
 function App() {
-  return (<BrowserRouter>
-    <GlobalStyle/>
-    <Routes>
-      <Route path="/" element={<DefaultLayout/>}/>
-      <Route path="/admin" element={<AdminLayout/>}/>
-    </Routes>
-  </BrowserRouter>
-
-  );
+    return (
+        <Provider store={store}>
+            <AppProvider>
+                <BrowserRouter>
+                    <GlobalStyle />
+                    <AppRoutes />
+                </BrowserRouter>
+            </AppProvider>
+        </Provider>
+    );
 }
 
 export default App;

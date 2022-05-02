@@ -5,16 +5,29 @@ import { Row, Col } from 'antd';
 import JobCard from '../JobCard';
 
 const Jobs = ({ data, title, type = 'row' }) => {
+    const span =
+        type === 'column'
+            ? {
+                  xl: 24,
+                  md: 12,
+              }
+            : { xl: 24 };
+    const gutter =
+        type === 'column'
+            ? {
+                  gutter: [24, 24],
+              }
+            : {};
     return (
-        <JobsWrapper data-type={type}>
+        <JobsWrapper>
             {title && <div className="title">{title}</div>}
             <div className="jobs">
-                <Row gutter={[32, 32]}>
-                    <Col span={24}>
-                        {data.map((job, index) => (
+                <Row {...gutter}>
+                    {data.map((job, index) => (
+                        <Col {...span}>
                             <JobCard key={index} type={type} job={job} />
-                        ))}
-                    </Col>
+                        </Col>
+                    ))}
                 </Row>
             </div>
         </JobsWrapper>

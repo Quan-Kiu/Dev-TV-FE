@@ -1,37 +1,43 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { JobCardWrapper } from './JobCard.style';
-import { Row, Col, Button } from 'antd';
 import { HeartOutlined } from '@ant-design/icons';
+import { Button, Col, Row } from 'antd';
+import React from 'react';
 import { jobForm } from '../../../constants';
+import { JobCardWrapper } from './JobCard.style';
+import { FormattedMessage } from 'react-intl';
 
 const JobCard = ({ type, job }) => {
-    const span = type === 'column' ? { span: 24 } : {};
+    const isColumn = type === 'column';
+    const span = isColumn ? { span: 24 } : {};
+    const CompanyLogoSize = isColumn ? '150px' : '50px';
+    const jobFormProps = isColumn ? { order: 1 } : {};
+    const likeProps = isColumn ? { order: 2 } : {};
 
     return (
         <JobCardWrapper data-type={type}>
             <Row gutter={[32, 32]} align={'middle'}>
                 <Col {...span}>
                     <img
-                        style={{ width: '50px', height: '50px', objectFit: 'contain' }}
+                        style={{ width: CompanyLogoSize, height: CompanyLogoSize, objectFit: 'contain' }}
                         src={job.image}
                         alt={job.image}
                     />
                 </Col>
                 <Col {...span} flex={1}>
-                    <div className="job__name">{job.name}</div>
-                    <div className="company">{job.company.name}</div>
+                    <div className="job__info">
+                        <div className="job__name">{job.name}</div>
+                        <div className="company">{job.company.name}</div>
+                    </div>
                 </Col>
 
                 <Col {...span}>
                     <Row align="middle" gutter={30}>
-                        <Col sm={24} xl={2}>
+                        <Col {...likeProps}>
                             <HeartOutlined />
                         </Col>
-                        <Col>{jobForm[job.form]}</Col>
-                        <Col>
+                        <Col {...jobFormProps}>{jobForm[job.form]}</Col>
+                        <Col order={3}>
                             <Button shape={'round'} type="primary">
-                                Apply now
+                                <FormattedMessage id="func.apply" />
                             </Button>
                         </Col>
                     </Row>

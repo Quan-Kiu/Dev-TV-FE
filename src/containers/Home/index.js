@@ -1,24 +1,38 @@
+import { Col, Row } from 'antd';
 import React from 'react';
-import PropTypes from 'prop-types';
-import Hero from '../../components/Common/Hero';
+import { useSelector } from 'react-redux';
 import Companies from '../../components/Common/Companies';
+import Container from '../../components/Common/Container';
+import Hero from '../../components/Common/Hero';
 import Jobs from '../../components/Common/Jobs';
 import { companies, jobs } from '../../data';
-import { Row, Col } from 'antd';
+import { FormattedMessage } from 'react-intl';
 
 const HomePage = (props) => {
+    const widthSize = useSelector(({ app }) => app.WIDTH);
+    // 800 is breakPont for feature jobs
+    const isColumn = widthSize <= 800;
+
     return (
         <div>
             <Hero />
-            <Companies data={companies} title={'Nhà tuyển dụng phổ biến'} />
-            <Row gutter={32}>
-                <Col span={16}>
-                    <Jobs data={jobs} title={'Công việc nổi bật'} />
-                </Col>
-                <Col span={8}>
-                    <Jobs data={jobs.slice(0, 2)} type="column" title={'Công việc mới đây'} />
-                </Col>
-            </Row>
+            <Container>
+                <Companies data={companies} title={<FormattedMessage id="title.popular-companies" />} />
+            </Container>
+            <Container>
+                <Row gutter={24}>
+                    <Col xl={16} md={24}>
+                        <Jobs
+                            data={jobs}
+                            type={isColumn && 'column'}
+                            title={<FormattedMessage id="title.feature-jobs" />}
+                        />
+                    </Col>
+                    <Col xl={8} md={24}>
+                        <Jobs data={jobs.slice(0, 2)} type="column" title={<FormattedMessage id="title.new-jobs" />} />
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };

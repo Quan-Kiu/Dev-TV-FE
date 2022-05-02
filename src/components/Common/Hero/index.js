@@ -3,6 +3,7 @@ import { Button, Form, Input, Row, Select, Col } from 'antd';
 import { Option } from 'antd/lib/mentions';
 import React from 'react';
 import { HeroWrapper } from './Hero.style';
+import { FormattedMessage } from 'react-intl';
 
 const Hero = (props) => {
     return (
@@ -22,7 +23,11 @@ const Hero = (props) => {
                     <Row>
                         <Col>
                             <Form.Item name="searchValue">
-                                <Input size="large" style={{ width: '30rem' }} placeholder="Search Jobs" />
+                                <Input
+                                    size="large"
+                                    style={{ width: '30rem' }}
+                                    placeholder={<FormattedMessage id="search.placeholder" />}
+                                />
                             </Form.Item>
                         </Col>
                         <Col>
@@ -38,7 +43,9 @@ const Hero = (props) => {
                                     size="large"
                                     style={{ width: '15rem' }}
                                 >
-                                    <Select.Option value="all">Tất cả</Select.Option>
+                                    <Select.Option value="all">
+                                        <FormattedMessage id="filter.all" />
+                                    </Select.Option>
                                     <Select.Option value="hcm">Hồ Chí Minh</Select.Option>
                                     <Select.Option value="hn">Hà Nội</Select.Option>
                                     <Select.Option value="dn">Dà Nẵng</Select.Option>

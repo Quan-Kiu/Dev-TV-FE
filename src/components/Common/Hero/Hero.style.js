@@ -1,4 +1,5 @@
 import styledComponents from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
 export const HeroWrapper = styledComponents.div`
     height: 80vh;
@@ -6,6 +7,7 @@ export const HeroWrapper = styledComponents.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    
     &::before{
         content: "";
         position: absolute;

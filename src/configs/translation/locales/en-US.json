@@ -1,0 +1,17 @@
+{
+    "headers.it-jobs": "IT Jobs",
+    "headers.developers-life": "Developers'Life",
+    "headers.build-cv": "Build your CV",
+    "headers.it-companies": "IT Companies",
+    "headers.employers": "Employers",
+    "headers.signin": "Sign In",
+    "filter.all": "All",
+    "title.popular-companies": "Popular Companies",
+    "title.feature-jobs": "Featured Jobs",
+    "title.new-jobs": "Recent Jobs",
+    "func.apply": "Apply now",
+    "job.fulltime": "Full Time",
+    "job.parttime": "Part Time",
+    "job.freelancer": "Freelancer",
+    "search.placeholder": "Search Jobs"
+}

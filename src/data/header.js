@@ -2,22 +2,22 @@ export const navMenu = [
     {
         key: 'tim-viec-it',
         path: '/tim-viec-it',
-        label: 'Tìm việc IT',
+        label: 'headers.it-jobs',
     },
     {
         key: 'cuoc-song-it',
         path: '/cuoc-song-it',
-        label: 'Cuộc sống IT',
+        label: 'headers.developers-life',
     },
     {
         key: 'tao-cv',
         path: '/tao-cv',
-        label: 'Tạo CV',
+        label: 'headers.build-cv',
     },
     {
         key: 'thi-truong-it`',
         path: '/thi-truong-it`',
-        label: 'Thị trường IT',
+        label: 'headers.it-companies',
     },
 ];
 
@@ -25,11 +25,11 @@ export const funcs = [
     {
         key: 'dang-nhap',
         path: '/dang-nhap',
-        label: 'Đăng nhập',
+        label: 'headers.signin',
     },
     {
         key: 'nha-tuyen-dung',
         path: '/nha-tuyen-dung',
-        label: 'Nhà tuyển dụng',
+        label: 'headers.employers',
     },
 ];

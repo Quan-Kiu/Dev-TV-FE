@@ -1,28 +1,32 @@
 import { Typography } from 'antd';
+import { FormattedMessage } from 'react-intl';
 
 export const jobForm = [
     <div
         style={{
             color: 'green',
-            fontSize: '12px',
+            fontSize: '11px',
+            textTransform: 'uppercase',
         }}
     >
-        {'Bán thời gian'.toUpperCase()}
+        <FormattedMessage id="job.fulltime" />
     </div>,
     <div
         style={{
             color: 'purple',
-            fontSize: '12px',
+            fontSize: '11px',
+            textTransform: 'uppercase',
         }}
     >
-        {'Toàn thời gian'.toUpperCase()}
+        <FormattedMessage id="job.parttime" />
     </div>,
     <div
         style={{
             color: 'red',
-            fontSize: '12px',
+            fontSize: '11px',
+            textTransform: 'uppercase',
         }}
     >
-        {'Tự do'.toUpperCase()}
+        <FormattedMessage id="job.freelancer" />
     </div>,
 ];
