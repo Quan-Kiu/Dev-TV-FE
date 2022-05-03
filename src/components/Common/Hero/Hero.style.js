@@ -29,6 +29,16 @@ export const HeroWrapper = styledComponents.div`
                 font-weight: bold;
             }
         }
+        button {
+            background: ${(props) => props.theme.primaryClr};
+            border: thin solid transparent;
+            text-transform: uppercase;
+            &:hover {
+                background: ${(props) => props.theme.redClr};
+                color: ${(props) => props.theme.whiteClr};
+                border: thin solid transparent;
+            }
+        }
         
     }
 `;

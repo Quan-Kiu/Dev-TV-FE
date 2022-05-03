@@ -9,6 +9,42 @@ export const LayoutWrapper = styled(Layout)`
         justify-content: space-between;
         align-items: center;
         height: 8rem;
+
+        .menu__collapse {
+            padding: 3rem 5rem;
+            background: #040e2b;
+            z-index: 2;
+            position: absolute;
+            inset: 0;
+            top: 8rem;
+            .nav-menu:last-child {
+                margin-top: 4rem;
+                flex-direction: column;
+                gap: 4rem;
+                a {
+                    font-size: 2rem;
+                }
+                a:first-child {
+                    margin-left: unset;
+                }
+            }
+            .nav-menu {
+                a {
+                    &:hover {
+                        color: ${(props) => props.theme.whiteClr};
+                    }
+                    order: 2;
+                    cursor: 'pointer';
+                }
+                a:first-child {
+                    margin-left: auto;
+                }
+                i {
+                    order: 1;
+                }
+            }
+        }
+
         .nav-menu {
             &:last-child {
                 justify-content: flex-end;

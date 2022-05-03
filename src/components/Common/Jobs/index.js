@@ -24,7 +24,7 @@ const Jobs = ({ data, title, type = 'row' }) => {
             <div className="jobs">
                 <Row {...gutter}>
                     {data.map((job, index) => (
-                        <Col {...span}>
+                        <Col key={index} {...span}>
                             <JobCard key={index} type={type} job={job} />
                         </Col>
                     ))}

@@ -1,9 +1,9 @@
 const theme = {
     primaryClr: '#26AE61',
     bg: '#FFFFFF',
+    blackClr: '#000000',
     whiteClr: '#FFFFFF',
     secondaryClr: '#F4F5FA',
-
     blueClr: '#007bff',
     indigoClr: '#6610f2',
     purpleClr: '#6f42c1',

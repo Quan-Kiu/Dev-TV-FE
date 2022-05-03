@@ -1,11 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { ContainerWrapper } from './Container.style';
 import { useSelector } from 'react-redux';
-const Container = (props) => {
+import { ContainerWrapper } from './Container.style';
+const Container = ({ className, children }) => {
     const widthSize = useSelector(({ app }) => app.WIDTH);
 
-    return <ContainerWrapper width-data={widthSize}>{props.children}</ContainerWrapper>;
+    return (
+        <ContainerWrapper className={className} width-data={widthSize}>
+            {children}
+        </ContainerWrapper>
+    );
 };
 
 Container.propTypes = {};

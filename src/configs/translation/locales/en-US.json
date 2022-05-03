@@ -9,9 +9,25 @@
     "title.popular-companies": "Popular Companies",
     "title.feature-jobs": "Featured Jobs",
     "title.new-jobs": "Recent Jobs",
+    "title.how-it-work": "How It Works",
+    "title.how-it-work-desc": "Each month, more than 7 million Jobhunt turn to website in their search for work, making over 160,000 applications every day",
+    "title.site-stats": "Dev-TV Site Stats",
+    "title.site-stats-desc": "Here we list our site stats and how many people we’ve helped find a job and companies have found recruits. It's a pretty awesome stats area!",
     "func.apply": "Apply now",
     "job.fulltime": "Full Time",
     "job.parttime": "Part Time",
     "job.freelancer": "Freelancer",
-    "search.placeholder": "Search Jobs"
+    "search.placeholder": "Search Jobs",
+    "title.question": "Frequently Asked Questions?",
+    "question.first": "How We Share Information?",
+    "answer.first": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
+    "question.second": "In Which We Explain How And With Whom We Share Your Information?",
+    "answer.second": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
+    "question.third": "Special Provisions Applicable To Employer?",
+    "answer.third": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
+    "question.four": "How Do I Find Contact Information For Harvard Students, Faculty?",
+    "answer.four": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
+
+    "button.readmore": "Read More",
+    "title.new-blog": "Newest blog entries"
 }

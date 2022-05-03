@@ -11,7 +11,7 @@ const Companies = ({ data, title }) => {
                 <div className="site-card-wrapper">
                     <Row gutter={[32, 32]}>
                         {data.map((company) => (
-                            <Col xs={24} sm={12} md={8} lg={6}>
+                            <Col key={company.id} xs={24} sm={12} md={8} lg={6}>
                                 <CompanyCard company={company} />
                             </Col>
                         ))}

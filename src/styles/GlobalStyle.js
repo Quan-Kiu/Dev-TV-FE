@@ -24,5 +24,10 @@ ul,li{
     list-style-type: none;
 }
 
+.section-title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
 
 `;

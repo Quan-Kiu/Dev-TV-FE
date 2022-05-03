@@ -28,4 +28,15 @@ export const JobCardWrapper = styled.div`
         display: block;
         margin: 0 auto;
     }
+    button {
+        background: ${(props) => props.theme.primaryClr};
+        border: thin solid currentColor;
+        text-transform: uppercase;
+        font-size: 12px;
+        &:hover {
+            background: ${(props) => props.theme.whiteClr};
+            color: ${(props) => props.theme.primaryClr};
+            border: thin solid currentColor;
+        }
+    }
 `;
