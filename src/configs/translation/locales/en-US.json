@@ -29,5 +29,18 @@
     "answer.four": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
 
     "button.readmore": "Read More",
-    "title.new-blog": "Newest blog entries"
+    "title.new-blog": "Newest blog entries",
+
+    "link.home":"Home",
+    "link.about-us":"About Us",
+    "link.contact-us":"Contact US",
+    "link.all-jobs":"All Job",
+    "link.faq":"Frequently Asked Questions",
+    "link.terms-conditions":"Terms and Condition",
+    "link.privacy-policy":"Privacy Policy",
+    "link.operating-regulation":"Operating Regulations",
+    "link.complaint-processing":"Resolve Complaints",
+    "link.term-condition":"Term Conditions",
+    "link.press":"Press"
+    
 }
