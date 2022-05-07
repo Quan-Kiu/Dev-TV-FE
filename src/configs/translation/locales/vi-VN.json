@@ -9,7 +9,7 @@
     "title.popular-companies": "Nhà tuyển dụng phổ biến",
     "title.feature-jobs": "Công việc nổi bật",
     "title.new-jobs": "Công việc mới đây",
-    "title.how-it-work": "How It Works",
+    "title.how-it-work": "Sử dụng như nào?",
     "title.how-it-work-desc": "Each month, more than 7 million Jobhunt turn to website in their search for work, making over 160,000 applications every day",
     "title.site-stats": "Dev-TV Site Stats",
     "title.site-stats-desc": "Here we list our site stats and how many people we’ve helped find a job and companies have found recruits. It's a pretty awesome stats area!",
@@ -30,5 +30,17 @@
     "answer.four": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
 
     "button.readmore": "Đọc thêm",
-    "title.new-blog": "Bài viết mới"
+    "title.new-blog": "Bài viết mới",
+    "link.home": "Trang chủ",
+
+
+    "auth.login.title": "Đăng nhập",
+    "auth.login.desc": "Tham gia vào Dev-TV",
+    "auth.login.remember": "Nhớ tài khoản",
+    "auth.login.forgot": "Quên mật khẩu",
+
+    "auth.signup.title": "Đăng ký người dùng",
+    "auth.signup.desc": "Đăng ký tham gia Dev-TV",
+
+    "site.or": "Hoặc"
 }

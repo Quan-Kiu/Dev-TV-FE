@@ -1,4 +1,5 @@
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
+import AuthModal from '../AuthModal';
 import { Divider, Dropdown, Menu } from 'antd';
 import React, { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
@@ -13,6 +14,7 @@ const Header = (props) => {
     const { lang, WIDTH } = useSelector(({ app }) => app);
     const [isCollapsed, setIsCollapsed] = useState(true);
     const dispatch = useDispatch();
+    const[showAuthModal,setShowAuthModal] = useState('');
 
     const langs = languageData.map((language, index) => ({
         label: (
@@ -55,8 +57,20 @@ const Header = (props) => {
             }}
         />
     );
+
+
+    const funcComponent = funcs.map((item) => (
+        <Link to="/" key={item.key} onClick={(e)=>{
+            e.preventDefault();
+            setShowAuthModal(item.key)
+        }}>
+            <FormattedMessage id={item.label} />
+        </Link>
+    ));
+            
     return (
         <>
+        {showAuthModal && <AuthModal type={showAuthModal} onClose={()=>setShowAuthModal("")}/>}
             {WIDTH >= 1150 && (
                 <div className="nav-menu">
                     {navMenu.map((item) => (
@@ -86,11 +100,7 @@ const Header = (props) => {
                         alignItems: 'center',
                     }}
                 >
-                    {funcs.map((item) => (
-                        <Link key={item.key} to={item.path}>
-                            <FormattedMessage id={item.label} />
-                        </Link>
-                    ))}
+                    {funcComponent}
 
                     <Dropdown overlay={<Menu items={langs} />} trigger={['click']}>
                         <i
@@ -113,11 +123,7 @@ const Header = (props) => {
                                 alignItems: 'center',
                             }}
                         >
-                            {funcs.map((item) => (
-                                <Link key={item.key} to={item.path}>
-                                    <FormattedMessage id={item.label} />
-                                </Link>
-                            ))}
+                            {funcComponent}
 
                             <Dropdown overlay={<Menu items={langs} />} trigger={['click']}>
                                 <i

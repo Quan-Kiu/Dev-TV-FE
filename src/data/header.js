@@ -23,13 +23,13 @@ export const navMenu = [
 
 export const funcs = [
     {
-        key: 'dang-nhap',
+        key: 'login',
         path: '/dang-nhap',
         label: 'headers.signin',
     },
     {
-        key: 'nha-tuyen-dung',
-        path: '/nha-tuyen-dung',
-        label: 'headers.employers',
+        key: 'signup',
+        path: '/signup',
+        label: 'headers.signup',
     },
 ];
