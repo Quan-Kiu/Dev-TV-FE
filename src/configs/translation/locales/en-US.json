@@ -19,15 +19,15 @@
     "job.freelancer": "Freelancer",
     "search.placeholder": "Search Jobs",
     "title.question": "Frequently Asked Questions?",
-    "question.first": "How We Share Information?",
-    "answer.first": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
-    "question.second": "In Which We Explain How And With Whom We Share Your Information?",
-    "answer.second": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
-    "question.third": "Special Provisions Applicable To Employer?",
-    "answer.third": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
-    "question.four": "How Do I Find Contact Information For Harvard Students, Faculty?",
-    "answer.four": "Book your car, all you need is a credit or debit card. When you pick the car up, you’ll need Different car hire companies have different requirements, so please make sure you check the car’s terms and conditions as well.",
 
+   "question.first": "How to ensure source code quality?",
+    "answer.first": "Is the source code running according to the requirement? Is the code written in the correct style convention? Avoid bad codes when writing code like duplicates, errors in conditional sentences, comparison sentences, ... Test full unit test unit.",
+    "question.second": "What is the difference between Cookie and session?",
+    "answer.second": "In PHP developer interview questions, this is a typical question to assess a candidate's knowledge. In terms of storage location, the session is stored on the server and the cookie is stored in the client's browser. Therefore, the security of the session is higher. Session can store unlimitedly and cookies can.",
+    "question.third": "What is the difference between Delete and Truncate statements in Database?",
+    "answer.third": "Delete is used to delete records, but not completely, but can be recovered. Truncate is to allocate data and completely delete records immediately",
+    "question.four": "What are the risks of using Excel Spreadsheet and Data Access in task management?",
+    "answer.four": "What are the risks of using Excel Spreadsheet and Data Access in task management?",
     "button.readmore": "Read More",
     "title.new-blog": "Newest blog entries",
     "link.home": "Home",
@@ -43,5 +43,17 @@
 
 
 
-    "site.or": "Or"
+    "site.or": "Or",
+
+    "link.about-us":"About Us",
+    "link.contact-us":"Contact US",
+    "link.all-jobs":"All Job",
+    "link.faq":"Frequently Asked Questions",
+    "link.terms-conditions":"Terms and Condition",
+    "link.privacy-policy":"Privacy Policy",
+    "link.operating-regulation":"Operating Regulations",
+    "link.complaint-processing":"Resolve Complaints",
+    "link.term-condition":"Term Conditions",
+    "link.press":"Press"
+    
 }
