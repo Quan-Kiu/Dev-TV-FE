@@ -1,17 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { AuthModalWrapper } from './AuthModal.style'
-import { Row,Col, Radio, Button, Divider,Form } from 'antd'
-import LoginForm from '../../../containers/Auth/LoginForm'
-import Checkbox from 'antd/lib/checkbox/Checkbox'
-import { FormattedMessage } from 'react-intl'
-import { Link } from 'react-router-dom'
 import { CloseOutlined, FacebookOutlined, GoogleOutlined } from '@ant-design/icons'
+import { Button, Col, Divider, Row } from 'antd'
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import LoginForm from '../../../containers/Auth/LoginForm'
 import SignUpForm from '../../../containers/Auth/SignUpForm'
+import { AuthModalWrapper } from './AuthModal.style'
 
 const AuthModal = ({onClose,type}) => {
 
-  const [form] = Form.useForm();
 
   return (
     <AuthModalWrapper>
@@ -25,27 +21,11 @@ const AuthModal = ({onClose,type}) => {
           <div className="desc">
             <FormattedMessage id={`auth.${type}.desc`}/>
           </div>
-          <Radio.Group  className="permission"  defaultValue="candidate">
-            <Radio.Button value="candidate">Candidate</Radio.Button>
-            <Radio.Button value="employer">Employer</Radio.Button>
-          </Radio.Group>
-
-          {type !=='login' ? <LoginForm form={form}/> : <SignUpForm form={form}/>}
+         
+          {type ==='login' ? <LoginForm onClose={onClose} /> : <SignUpForm onClose={onClose} />}
 
           
 
-
-          <Row justify="space-between">
-            <Col>
-            <Checkbox> <FormattedMessage id="auth.login.remember"/></Checkbox>
-            </Col>
-            <Link to=""> <FormattedMessage id="auth.login.forgot"/></Link>
-          </Row>
-
-
-          <Button className="button-submit">
-            <FormattedMessage id="auth.login.title"/>
-          </Button>
 
           <Divider plain>
             <FormattedMessage id="site.or"/>

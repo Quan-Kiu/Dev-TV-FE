@@ -5,6 +5,7 @@
     "headers.it-companies": "Thị trường IT",
     "headers.employers": "Nhà tuyển dụng",
     "headers.signin": "Đăng nhập",
+    "headers.signup": "Đắng ký",
     "filter.all": "Tất cả",
     "title.popular-companies": "Nhà tuyển dụng phổ biến",
     "title.feature-jobs": "Công việc nổi bật",
@@ -34,8 +35,8 @@
     "link.home": "Trang chủ",
 
 
-    "auth.login.title": "Đăng nhập",
-    "auth.login.desc": "Tham gia vào Dev-TV",
+    "auth.login.title": "Đăng nhập người dùng",
+    "auth.login.desc": "Đăng nhập tham gia vào Dev-TV",
     "auth.login.remember": "Nhớ tài khoản",
     "auth.login.forgot": "Quên mật khẩu",
 
@@ -52,5 +53,25 @@
     "link.operating-regulation":"Quy chế hoạt động",
     "link.complaint-handling":"Giải quyết khiếu nại ",
     "link.term-conditions":"Thoả thuận sử dụng ",
-    "link.press":"Thông cáo báo chí"
+    "link.press":"Thông cáo báo chí",
+
+    "response.message.title.has-error": "Có lỗi",
+    "response.message.title.new-verify-code": "Mã xác nhận mới đã được gửi",
+    "response.message.content.new-verify-code": "Mã xác nhận mới đã được gửi, Vui lòng kiếm tra email của bạn!",
+    "response.message.title.signup": "Đăng ký thành công",
+    "response.message.content.signup": "Đăng ký thành công, Vui lòng kiểm tra email và xác nhận tài khoản!",
+    "response.message.title.verify-code": "Tài khoản đã được xác nhận",
+    "response.message.content.verify-code": "Tài khoản đã được xác nhận thành công, Vui lòng đăng nhập!",
+    "response.message.content.has-error": "Có lỗi, Vui lòng thử lại!",
+
+
+    "auth.field.email": "Email",
+    "auth.field.password": "Mật khẩu",
+    "auth.field.confirmationPassword": "Xác nhận mật khẩu",
+
+    
+    "permission.employer": "Nhà tuyển dụng",
+    "permission.candidate": "Ứng viên",
+    "permission.admin": "Admin"
+
 }

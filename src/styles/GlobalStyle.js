@@ -30,4 +30,12 @@ ul,li{
     margin-bottom: 2rem;
 }
 
+.ant-modal-wrap{
+    z-index:1000000;
+}
+.ant-message{
+    
+    z-index:1000000;
+}
+
 `;

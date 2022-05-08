@@ -8,6 +8,7 @@ const initialState = {
         name: 'Việt Nam',
         icon: 'vn',
     },
+    appLoading: null,
 };
 
 const app = (state = initialState, action) => {
@@ -21,6 +22,11 @@ const app = (state = initialState, action) => {
             return {
                 ...state,
                 lang: action.payload,
+            };
+        case APP_ACTION.setAppLoading:
+            return {
+                ...state,
+                appLoading: action.payload,
             };
         default:
             return state;

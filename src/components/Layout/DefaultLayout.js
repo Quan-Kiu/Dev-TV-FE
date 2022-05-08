@@ -4,8 +4,21 @@ import HomePage from '../../containers/Home';
 import Header from '../Common/Header';
 import Footer from '../Common/Footer';
 import { LayoutWrapper } from './DefaultLayout.style';
-import theme from '../../configs/theme';
 import Container from '../Common/Container';
+import { Route, Routes } from 'react-router-dom';
+import SearchPage from '../../containers/Search';
+import Verify from '../../containers/Auth/Verify';
+
+const LayoutRoutes = ()=>{
+    
+    return (
+        <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/tim-kiem" element={<SearchPage/>}/>
+            <Route path="/account/verify/:id" element={<Verify/>}/>
+        </Routes>
+    )
+}
 
 const DefaultLayout = (props) => {
     return (
@@ -14,7 +27,7 @@ const DefaultLayout = (props) => {
                 <Header />
             </Layout.Header>
             <Layout.Content>
-                <HomePage />
+                <LayoutRoutes/>
             </Layout.Content>
 
             <Layout.Footer

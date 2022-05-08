@@ -1,29 +1,38 @@
+import { md } from "../../../constants/breakPoint";
+import useResponsive from "../../../hooks/useResponsive";
+
 const { default: styledComponents } = require("styled-components");
 
 export const AuthModalWrapper = styledComponents.div`
     position: fixed;
-    inset: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height:100%;
+    overflow-Y: scroll;
     background: rgba(0,0,0,0.7);
-    display: flex;
     z-index: 10000;
-    justify-content: center;
-    align-items: center;
-
-
+    
+   
     .content{
+        margin: 3rem auto;
         position: relative;
         border-radius: 10px;
         text-align: center;
         padding:3rem 6rem;
         background: ${(props) => props.theme.whiteClr};
         width: 50rem;
-
         .ant-divider{
             span{
                 opacity: .8;
                 font-size: 1.6rem;  
             }
         }
+        
+        ${useResponsive`${md};
+        width: 100%;
+        padding:2rem 4rem;
+        `}
 
         .close-button{
             position: absolute;
@@ -76,4 +85,6 @@ export const AuthModalWrapper = styledComponents.div`
         }
         
     }
+
+ 
 `;

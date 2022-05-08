@@ -1,4 +1,3 @@
-import { Typography } from 'antd';
 import { FormattedMessage } from 'react-intl';
 
 export const jobForm = [

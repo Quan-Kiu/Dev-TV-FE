@@ -2,7 +2,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { Avatar, Col, Row } from 'antd';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Companies from '../../components/Common/Companies';
 import Container from '../../components/Common/Container';
 import Hero from '../../components/Common/Hero';
@@ -15,6 +15,7 @@ import { HomeWrapper } from './Home.style';
 import { Collapse } from 'antd';
 import Button from '../../components/Common/Button';
 import { Link } from 'react-router-dom';
+import { setNotifyModal } from '../../redux/app/action';
 
 const { Panel } = Collapse;
 
@@ -25,6 +26,7 @@ const HomePage = (props) => {
 
     return (
         <HomeWrapper>
+            
             <Hero />
             <Container>
                 <Companies data={companies} title={<FormattedMessage id="title.popular-companies" />} />
@@ -42,8 +44,9 @@ const HomePage = (props) => {
                         <Jobs data={jobs.slice(0, 2)} type="column" title={<FormattedMessage id="title.new-jobs" />} />
                     </Col>
                 </Row>
+                
             </Container>
-
+            
             <Container className="new-blog">
                 <div className="section-title">
                     <FormattedMessage id="title.new-blog" />

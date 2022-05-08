@@ -1,20 +1,23 @@
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import AuthModal from '../AuthModal';
 import { Divider, Dropdown, Menu } from 'antd';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import theme from '../../../configs/theme';
 import { funcs, navMenu } from '../../../data';
 import languageData from '../../../data/languge';
 import { updateLang } from '../../../redux/app/action';
+import { setAuthModal } from '../../../redux/auth/action';
+import { authSelector } from '../../../redux/auth/reducer';
 
 const Header = (props) => {
     const { lang, WIDTH } = useSelector(({ app }) => app);
     const [isCollapsed, setIsCollapsed] = useState(true);
     const dispatch = useDispatch();
-    const[showAuthModal,setShowAuthModal] = useState('');
+    const {authModal} = useSelector(authSelector);
+    const location = useLocation();
 
     const langs = languageData.map((language, index) => ({
         label: (
@@ -58,11 +61,18 @@ const Header = (props) => {
         />
     );
 
+    useEffect(() => {
+        if(!isCollapsed){
+            setIsCollapsed(true);
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[location])
+
 
     const funcComponent = funcs.map((item) => (
         <Link to="/" key={item.key} onClick={(e)=>{
             e.preventDefault();
-            setShowAuthModal(item.key)
+            dispatch(setAuthModal(item.key))
         }}>
             <FormattedMessage id={item.label} />
         </Link>
@@ -70,7 +80,7 @@ const Header = (props) => {
             
     return (
         <>
-        {showAuthModal && <AuthModal type={showAuthModal} onClose={()=>setShowAuthModal("")}/>}
+        {authModal && <AuthModal type={authModal} onClose={()=> dispatch(setAuthModal(null))}/>}
             {WIDTH >= 1150 && (
                 <div className="nav-menu">
                     {navMenu.map((item) => (

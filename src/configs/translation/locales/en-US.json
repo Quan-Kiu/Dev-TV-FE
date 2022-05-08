@@ -4,7 +4,8 @@
     "headers.build-cv": "Build your CV",
     "headers.it-companies": "IT Companies",
     "headers.employers": "Employers",
-    "headers.signin": "Sign In",
+    "headers.signin": "Login",
+    "headers.signup": "SignUp",
     "filter.all": "All",
     "title.popular-companies": "Popular Companies",
     "title.feature-jobs": "Featured Jobs",
@@ -41,6 +42,8 @@
     "auth.signup.title": "User SignUp",
     "auth.signup.desc": "Click To SignUp To Dev-TV",
 
+    "auth.rules.required.username": "Please enter your username",
+
 
 
     "site.or": "Or",
@@ -54,6 +57,25 @@
     "link.operating-regulation":"Operating Regulations",
     "link.complaint-processing":"Resolve Complaints",
     "link.term-condition":"Term Conditions",
-    "link.press":"Press"
+    "link.press":"Press",
+
+    "response.message.title.has-error": "Has Error",
+    "response.message.title.new-verify-code": "New Verify Code Sended",
+    "response.message.content.new-verify-code": "New verify code sended, Please check your email!",
+    "response.message.title.signup": "Sign Up Successfully",
+    "response.message.content.signup": "Sign up successfully, Please check your email!",
+    "response.message.title.verify-code": "Account Verified",
+    "response.message.content.verify-code": "Account verified, Please login new!",
+    "response.message.content.has-error": "Has error, please try again!",
+
+    "auth.field.email": "Email",
+    "auth.field.password": "Password",
+    "auth.field.confirmationPassword": "Confirmation Password",
+
+
+    "permission.employer": "Employer",
+    "permission.candidate": "Candidate",
+    "permission.admin": "Admin"
+
     
 }

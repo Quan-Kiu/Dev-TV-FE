@@ -3,9 +3,10 @@ import { Button, Form, Input, Row, Select, Col } from 'antd';
 import { Option } from 'antd/lib/mentions';
 import React from 'react';
 import { HeroWrapper } from './Hero.style';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 const Hero = (props) => {
+    const intl = useIntl();
     return (
         <HeroWrapper
             style={{
@@ -26,7 +27,7 @@ const Hero = (props) => {
                                 <Input
                                     size="large"
                                     style={{ width: '30rem' }}
-                                    placeholder={<FormattedMessage id="search.placeholder" />}
+                                    placeholder={intl.formatMessage({id: 'search.placeholder'})}
                                 />
                             </Form.Item>
                         </Col>
@@ -48,7 +49,7 @@ const Hero = (props) => {
                                     </Select.Option>
                                     <Select.Option value="hcm">Hồ Chí Minh</Select.Option>
                                     <Select.Option value="hn">Hà Nội</Select.Option>
-                                    <Select.Option value="dn">Dà Nẵng</Select.Option>
+                                    <Select.Option value="dn">Đà Nẵng</Select.Option>
                                 </Select>
                             </Form.Item>
                         </Col>
